@@ -1,0 +1,141 @@
+:root {
+    --white: #edf2f4;
+    --dark: #2b2d42;
+    --dark-red: #ef233c;
+    --text-color: #8d99ae;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+    list-style: none;
+}
+.cake-container::before {
+    height: 60vh;
+    width: 200vw;
+    content: '';
+    position: absolute;
+    left: -50%;
+    z-index: -1;
+    background-color: var(--dark);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.cake-container{
+    height: 60vh;
+    width: 100vw;
+    color: var(--white);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cake {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    /* border: 2px solid red; */
+    /* background-color: var(--dark-red); */
+    position: relative;
+    overflow: visible;
+}
+.qtty-container {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: visible;
+}
+.qtty{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fdfdfd;
+    color: var(--dark);
+}
+.qtty-container>.btn {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    position: absolute;
+    right: -10%;
+    border: none;
+    background: #e0e0e0;
+    /* box-shadow: 5px 5px 10px #d5d5d5,
+                -5px -5px 10px #ebebeb; */
+}
+.qtty-container>.add{
+    top: -5%;
+}
+.qtty-container>.remove{
+    bottom: -5%;
+}
+.price {
+    margin-bottom: 2rem;
+}
+.price>span:nth-child(2) {
+    font-size: .8rem;
+    position: absolute;
+}
+.description-container{
+    padding: 1.2rem 1.2rem 0;
+}
+.title{
+    margin-bottom: .5rem;
+    color: var(--dark)
+}
+.description-container>.description{
+    font-size: .8rem;
+    color: var(--text-color)
+}
+.baking-container {
+    padding: 1.2rem 0 0 0;
+}
+.baking-container>.title{
+    padding-left: 1.2rem;
+}
+.options {
+    width: 100vw;
+    height: 3rem;
+    display: -webkit-inline-box;
+    overflow-x: scroll;
+}
+.options>.item{
+    margin: 0 .5rem;
+    overflow: visible;
+}
+.options>.item>.option {
+    width: fit-content;
+    padding: .7rem;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 5px 5px 8px #b8b8b8,
+                -5px -5px 8px #ffffff;
+}
+.options>.item>.option:hover{
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+}
+
+/* Ingredients */
+.ingredients {
+    z-index: 2;
+    width: 224px;
+    height: 224px;
+}
